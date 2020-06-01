@@ -1,0 +1,10 @@
+.headerContent {
+  height: 60px;
+  background-color: rgb(0, 150, 136);
+}
+
+@media (max-width: 768px) {
+  #nav {
+    display: none;
+  }
+}

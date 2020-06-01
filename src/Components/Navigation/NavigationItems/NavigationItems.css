@@ -1,0 +1,13 @@
+.navItemLink {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  ul {
+    flex-flow: column;
+  }
+
+  .navItemLink {
+    color: black;
+  }
+}
