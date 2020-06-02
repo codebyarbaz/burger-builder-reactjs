@@ -12,6 +12,7 @@ export default function BuildControls(props) {
         ingredients={props.ingredientAddedList}
         totalPrice={props.price}
         continueOrder={props.resetBurger}
+        cancelOrder={props.cancelPurchase}
       />
     );
   }

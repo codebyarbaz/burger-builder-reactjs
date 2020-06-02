@@ -77,6 +77,10 @@ export default class BurgerBuilder extends Component {
     this.setState({ ...this.state, isPurchasable: true });
   }
 
+  cancelPurchase() {
+    this.setState({ ...this.state, isPurchasable: false });
+  }
+
   resetBurger() {
     alert(
       `Thanks for purchasing! Your total bill is $${this.state.totalPrice}`
@@ -123,6 +127,7 @@ export default class BurgerBuilder extends Component {
           confirmOrder={this.confirmOrder.bind(this)}
           isPurchasable={this.state.isPurchasable}
           resetBurger={this.resetBurger.bind(this)}
+          cancelPurchase={this.cancelPurchase.bind(this)}
         />
       </Fragment>
     );
