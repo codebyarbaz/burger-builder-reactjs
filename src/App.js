@@ -1,4 +1,5 @@
-import React, { Fragment, Component } from "react";
+import React, { Component } from "react";
+import { BrowserRouter, Route } from "react-router-dom";
 
 import Header from "./Components/Navigation/Header/Header";
 import BurgerBuilder from "./Containers/BurgerBuilder/BurderBuilder";
@@ -23,13 +24,16 @@ export default class App extends Component {
 
   render() {
     return (
-      <Fragment>
+      <BrowserRouter>
         <Header
           isSidebarOpen={this.state.isSidebarOpen}
           toggleSidebar={this.toggleSidebar.bind(this)}
         />
-        <BurgerBuilder />
-      </Fragment>
+        <Route path="/" exact component={BurgerBuilder} />
+        <Route path="/orders" exact render={() => <p>Orders</p>} />
+        <Route path="/account" exact render={() => <p>Account</p>} />
+        <Route path="/checkout" exact render={() => <p>Checkout</p>} />
+      </BrowserRouter>
     );
   }
 }

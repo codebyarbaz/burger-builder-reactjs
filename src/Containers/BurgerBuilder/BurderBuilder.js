@@ -3,7 +3,9 @@ import React, { Component, Fragment } from "react";
 import Burger from "../../Components/Burger/Burger";
 import BuildControls from "../../Components/BuildControls/BuildControls";
 
-export default class BurgerBuilder extends Component {
+import errorHandler from '../../hoc/errorHandler';
+
+class BurgerBuilder extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -133,3 +135,6 @@ export default class BurgerBuilder extends Component {
     );
   }
 }
+
+
+export default errorHandler(BurgerBuilder);
